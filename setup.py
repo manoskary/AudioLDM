@@ -35,7 +35,7 @@ VERSION = "0.1.1"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    "torch>=1.13.0",
+    "torch>=2.0",
     "torchaudio>=0.13.0",
     "torchvision>=0.14.0",
     "tqdm",

@@ -31,6 +31,7 @@ def text2audio(text, duration, guidance_scale, random_seed, n_candidates, model_
     if audioldm is None or model_name != current_model_name:
         audioldm=build_model(model_name=model_name)
         current_model_name = model_name
+        audioldm = torch.compile(audioldm)
         
     # print(text, length, guidance_scale)
     waveform = text_to_audio(
